@@ -10,7 +10,7 @@ var connection = mysql.createConnection({
 
 var log = function(mac_id, type, value, callback){
 
-	var sql = "INSERT INTO data VALUES (?, ?, ?)"
+	var sql = "INSERT INTO data VALUES (?, ?, ?, NOW())"
 
 	data = [mac_id, type, parseFloat(value)]
 
